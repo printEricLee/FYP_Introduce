@@ -2,12 +2,18 @@
 
 /* sidebar */
 .container-all {
+    background-color: #ECDFCC;
+    flex: 1;
     display: flex;
+    align-items: stretch;
     min-height: 100vh;
 }
 
 #sidebar {
-    transition: margin-left 0.3s ease;
+    height: 141vh;
+    width: 250px;
+    background-color: #181C14;
+    color: white;
 }
 
 #sidebar.active {
@@ -15,9 +21,13 @@
 }
 
 .collapse-btn {
-    left: 50%;
-    /* Center it */
-    transform: translateX(-50%);
+    position: relative;
+    top: 1%;
+    left: 200px;
+    background-color: #181C14;
+    color: white;
+    border: none;
+    font-size: 30px;
 }
 
 .collapse-btn:hover {
@@ -111,7 +121,7 @@ img {
 }
 
 /* lanuage page */
-.language-container h2 {
+.language-container h2{
     text-align: center;
     font-style: italic;
     font-size: 40px;
@@ -119,8 +129,10 @@ img {
 }
 
 footer {
-    background-color: #181C14;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #181C14;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
+
+
