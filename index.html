@@ -4,43 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/style.css" />
 
-    <link rel="stylesheet" href="./css/noscript.css" />
+    <!-- bootstrap css & js-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery & js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="./js/script.js"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <title> Project Introduce </title>
 
     <link rel="shortcut icon" href="images/Chun_Wo_logo.png" type="image/x-icon">
-
 </head>
 
-<body class="is-preload landing">
+<body>
+    <div class="container-all">
+        <!-- sidebar -->
+        <div class="container-left">
+            <nav id="sidebar">
 
-    <div id="page-wrapper">
+                <button type="button" id="collapse" class="collapse-btn">
+                    <i class="fa-solid fa-left-long"></i>
+                </button>
 
-        <header id="header">
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html"> Home </a></li>
-                    <li><a href="index.html"> Project Introduce </a></li>
+                <ul class="list-unstyled">
+
+                    <p> Chun Wo <br /> FYP Project </p>
+
                     <li>
-                        <a href="#"> Programming Lanuage </a>
-                        <ul>
-                            <li><a href="python.html"> Python </a></li>
-                            <li><a href="flask.html"> Flask </a></li>
-                            <li><a href="yolo.html"> YOLO </a></li>
+                        <a href="index.html">Home <i class="fa-solid fa-house"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"> Project<i class="fa-solid fa-list-check"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#sublist" data-bs-toggle="collapse" id="dropdown"> Language <i
+                                class="fa-solid fa-code"></i></a>
+                        <ul id="sublist" class="list-unstyled collapse">
+                            <li><a href="python.html"> Python <i class="fa-brands fa-python"></i></a>
+                            </li>
+                            <li><a href="flask.html"> Flask <i class="fa-solid fa-flask"></i></a>
+                            </li>
+                            <li><a href="yolo.html"> YOLO <i class="fa-solid fa-camera"></i></a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <button id="mode-toggle" aria-label="Toggle Light/Dark Mode">切換模式</button>
-        </header>
+        </div>
 
+        <!-- sidebar end -->
 
-
-        <section id="banner">
-            <div class="content">
+        <div class="container-right" data-aos="fade-up">
+            <div id="title">
                 <header>
                     <h2 style="text-align: center;"> Smart Compliance for Construction Waste Disposal </h2>
                     <p style="text-align: center;"> This is a collaboration project between HKIIT and Chun Wo
@@ -54,54 +88,68 @@
                         minimize the labor costs and ensure robust regulatory adherence for dump
                         truck disposal. </p>
                 </header>
-                <span class="image" style="display: block; margin: 0 auto;"><img src="./images/Chun_Wo_logo.png"
-                        alt="" /></span>
+                <span class="image" style="display: block; margin: 0 auto;">
+                    <img src="./images/Chun_Wo_logo.png" alt="" />
+                </span>
             </div>
-        </section>
 
-        <section id="four" class="wrapper style1 special fade-up">
-            <div class="container">
-                <header class="major">
-                    <h2> Lanuage Base </h2>
-                </header>
-                <div class="box alt">
-                    <div class="row gtr-uniform">
-
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/python_logo.png" alt="Python Logo" style="width: 50px; height: 50px;">
-                            <h3> Python </h3>
-                            <p> We use Python programming language to efficiently control and manage all functions
-                                seamlessly. </p>
-                        </section>
-
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/flask_logo.png" alt="Python Logo" style="width: 50px; height: 50px;">
-                            <h3> Flask </h3>
-                            <p> We use Flask framework to develop, host, and manage the entire website efficiently and
-                                securely. </p>
-                        </section>
-
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <img src="./images/yolo_logo.png" alt="Python Logo" style="width: 50px; height: 50px;">
-                            <h3> YOLO </h3>
-                            <p> We use YOLO to build, train, and deploy all the prediction models accurately and
-                                quickly. </p>
-                        </section>
+            <div class="container-card text-center" data-aos="fade-right">
+                <p> Produced </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Lee Ka Ho <br /> 230170593 </h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <h5 class="card-title">KiKi</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Jacky</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <footer id="footer">
-            This website is created and maintained by Chun Wo and our team. &copy; 2025 All rights reserved.<li>This Website Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </footer>
 
-        <script src="./js/script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.3.6/jquery.minicolors.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollex/0.2.1/jquery.scrollex.min.js"></script>
+            <div class="language-container" style="background-color: #ECDFCC;" data-aos="fade-up-right">
+                <h2> Lanuage Base </h2>
+                <div class="box">
+                    <img src="./images/python_logo.png" alt="Python Logo" style="width: 50px; height: 50px;">
+                    <h3> Python </h3>
+                    <p> We use Python programming language to efficiently control and manage all functions
+                        seamlessly. </p>
+                </div>
 
+                <div class="box">
+                    <img src="./images/flask_logo.png" alt="flask Logo" style="width: 50px; height: 50px;">
+                    <h3> Flask </h3>
+                    <p> We use Flask framework to develop, host, and manage the entire website efficiently and
+                        securely. </p>
+                </div>
+
+                <div class="box">
+                    <img src="./images/yolo_logo.png" alt="yolo Logo" style="width: 50px; height: 50px;">
+                    <h3> YOLO </h3>
+                    <p> We use YOLO to build, train, and deploy all the prediction models accurately and
+                        quickly. </p>
+                </div>
+            </div>
+
+            <footer>
+                This website is created and maintained by Chun Wo and our team. &copy; 2025 All rights reserved.
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            duration:1000,
+        });
+    </script>
 </body>
 
 </html>
