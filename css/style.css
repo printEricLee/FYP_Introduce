@@ -2,18 +2,18 @@
 
 /* sidebar */
 .container-all {
-    background-color: #ECDFCC;
-    flex: 1;
     display: flex;
     align-items: stretch;
     min-height: 100vh;
+    background-color: #181C14;
 }
 
 #sidebar {
-    height: 141vh;
+    height: 100vh;
     width: 250px;
     background-color: #181C14;
     color: white;
+    transition: 1s;
 }
 
 #sidebar.active {
