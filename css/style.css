@@ -107,6 +107,11 @@ h2 {
     font-size: 25px;
 }
 
+#title {
+    height: 100vh;
+}
+
+
 img {
     border-radius: 100%;
 }
